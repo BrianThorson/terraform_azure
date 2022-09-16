@@ -34,12 +34,19 @@ Tweakable items include:    (look in variables.tf)
                 Network security group
                 Virtual Network
 
+
 Useful links
 
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_virtual_machine
 https://www.terraform.io/language/expressions/conditionals
 https://docs.microsoft.com/en-us/azure/developer/terraform/create-resource-group?tabs=azure-cli
 https://docs.microsoft.com/en-us/azure/backup/backup-azure-policy-supported-skus
+https://docs.microsoft.com/en-us/azure/virtual-machines/sizes
+https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable
+https://docs.microsoft.com/en-us/azure/virtual-machines/disks-performance
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk
+https://registry.terraform.io/modules/Azure/network-security-group/azurerm/latest
+https://romaklimenko.github.io/blog/2021/list-locations/
 
 
 License
