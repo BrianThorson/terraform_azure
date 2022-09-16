@@ -1,37 +1,43 @@
-// 2022 (Brian Thorson) Copy, move, remove or label any and all parts
-// Refer to <https://unlicense.org>
+//
+//  2022 (Brian Thorson) Copy, move, remove or label any and all parts
+//  Refer to <https://unlicense.org>
 //
 //    Changeable items:
 //
-//    Location
-//
-//    Availability set
-//    Virtual machine
-//    Disk
+//    Resource Group Location
+//    Resource Group Naming
+//    Virtual machine type
+//    Disk options
 //    Network interface
 //    Network security group
 //    Virtual Network
 //    
 
-// Resource group location
+//
+//  Resource group location       (possible locations at bottom)
+//
 variable "rg_location" {
   default     = "westus3"
   description = "Resource group location"
 }
 
-
-// Resource group naming convention  = "rg_prefix-rg_project"
-// *prefix*
+//
+//  Resource group naming         ("rg_prefix-rg_project")
+//
 variable "rg_prefix" {
   default     = "brian"
   description = "Resource group prefix name"
 }
-// *project*
+
 variable "rg_project" {
   default     = "winserver19"
   description = "Resource group project name"
 }
 
+//
+//  Source image properties:  publisher, offer, SKU
+//                                      (VM Examples at bottom)
+//
 variable "vm_publisher" {
   default     = "MicrosoftWindowsServer"
   description = "VM Publisher"
@@ -45,6 +51,38 @@ variable "vm_offer" {
 variable "vm_SKU" {
   default     = "2019-Datacenter"
   description = "VM SKU"
+}
+
+//
+//  VM size & storage:    size, storage account type, caching
+//                                      (VM Examples at bottom)
+//
+variable "vm_size" {
+  default     = "Standard_B1s"
+  description = "VM Size"
+}
+
+variable "vm_storage_account_type" {
+  default               = "Standard_LRS"
+  description           = "VM Managed disk type"
+}
+
+variable "vm_disk_caching" {
+  default               = "ReadWrite"
+  description           = "VM Disk caching"
+}
+
+//
+//  VM admin username & password    (self-explanatory)
+//
+variable "vm_admin_username" {
+  default               = "winuser"
+  description           = "VM admin user name"
+}
+
+variable "vm_admin_password" {
+  default               = "Ch@ng3YourPa$$word!!!"
+  description           = "VM admin user password"
 }
 
 /*  Locations
@@ -81,3 +119,18 @@ variable "vm_SKU" {
       Canonical               UbuntuServer    18.04-LTS
       Canonical               UbuntuServer    16.04-LTS */
 
+/*  Storage account type
+      Standard_LRS        StandardSSD_ZRS     Premium_LRS         Premium_ZRS
+      StandardSSD_LRS     UltraSSD_LRS */
+
+/*  Disk caching
+      ReadWrite        Read */
+
+
+/*  VM sizes      For this project we'll just list B series
+                  Naturally, there a lot more options
+                  https://docs.microsoft.com/en-us/azure/virtual-machines/sizes
+
+      Standard_B1s            Standard_B1ls2    Standard_B1ms     Standard_B2s
+      Standard_B2ms           Standard_B4ms     Standard_B8ms     Standard_B12ms    
+      Standard_B20ms          StandardStandard_B16ms */
