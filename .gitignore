@@ -1,0 +1,16 @@
+.terraform.lock.hcl
+main.destroy.tfplan
+main.tfplan
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/2.99.0/windows_386/terraform-provider-azurerm_v2.99.0_x5.exe
+backup/almost ready.zip
+backup/terraform_config_files.zip
+.terraform/providers/registry.terraform.io/hashicorp/random/3.4.3/windows_386/terraform-provider-random_v3.4.3_x5.exe
+old/main.tf
+old/outputs.tf
+old/pre-overhaul.zip
+old/backup-beforeworking.zip
+old/providers.tf
+old/variables.tf
+old/working.zip
