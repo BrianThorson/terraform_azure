@@ -108,9 +108,9 @@ resource "azurerm_windows_virtual_machine" rg_project {
 
   // The OS that our VM image is based on
   source_image_reference {
-    publisher = "MicrosoftWindowsServer"
-    offer     = "WindowsServer"
-    sku       = "2019-Datacenter"
+    publisher = "${var.vm_publisher}"
+    offer     = "${var.vm_offer}"
+    sku       = "${var.vm_SKU}"
     version   = "latest"
   }
 }
