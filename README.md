@@ -47,6 +47,7 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/disks-performance
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk
 https://registry.terraform.io/modules/Azure/network-security-group/azurerm/latest
 https://romaklimenko.github.io/blog/2021/list-locations/
+https://az-vm-image.info/
 
 
 License

@@ -25,12 +25,13 @@ variable "rg_location" {
 //  Resource group naming         ("rg_prefix-rg_project")
 //
 variable "rg_prefix" {
-  default     = "brian"
+  default     = "ubuntu"
   description = "Resource group prefix name"
 }
 
 variable "rg_project" {
-  default     = "winserver19"
+  //default     = "winserver19"
+  default     = "assign3"
   description = "Resource group project name"
 }
 
@@ -39,17 +40,17 @@ variable "rg_project" {
 //                                      (VM Examples at bottom)
 //
 variable "vm_publisher" {
-  default     = "MicrosoftWindowsServer"
+  default     = "Canonical"
   description = "VM Publisher"
 }
 
 variable "vm_offer" {
-  default     = "WindowsServer"
+  default     = "UbuntuServer"
   description = "VM Offer"
 }
 
 variable "vm_SKU" {
-  default     = "2019-Datacenter"
+  default     = "18.04-LTS"
   description = "VM SKU"
 }
 
@@ -76,7 +77,7 @@ variable "vm_disk_caching" {
 //  VM admin username & password    (self-explanatory)
 //
 variable "vm_admin_username" {
-  default               = "winuser"
+  default               = "ubuntu"
   description           = "VM admin user name"
 }
 
