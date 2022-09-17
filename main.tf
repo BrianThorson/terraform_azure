@@ -78,6 +78,18 @@ resource "azurerm_network_security_group" "nsg" {
   location                        = azurerm_resource_group.rg.location
 
    security_rule {
+    name                          = "ssh"
+    priority                      = 202
+    direction                     = "Inbound"
+    access                        = "Allow"
+    protocol                      = "Tcp"
+    source_port_range             = "*"
+    destination_port_range        = "22"
+    source_address_prefix         = "*"
+    destination_address_prefix    = "*"
+    description                   = "myssh"
+  }
+   /* security_rule {
     name                          = "rdp"
     priority                      = 201
     direction                     = "Inbound"
@@ -100,7 +112,7 @@ resource "azurerm_network_security_group" "nsg" {
     source_address_prefix         = "*"
     destination_address_prefix    = "*"
     description                   = "myhttp"
-  }
+  } */
 }
 
 //
@@ -114,7 +126,7 @@ resource "azurerm_network_interface_security_group_association" "association" {
 //
 // Create a Windows server virtual machine (VM)
 //
-resource "azurerm_windows_virtual_machine" rg_project {
+resource "azurerm_linux_virtual_machine" rg_project {
 
   // Resource group (RG) name, location, and availability set
   resource_group_name     = azurerm_resource_group.rg.name
@@ -142,6 +154,13 @@ resource "azurerm_windows_virtual_machine" rg_project {
   //  Admin user
   admin_username          = "${var.vm_admin_username}"
   admin_password          = "${var.vm_admin_password}" 
+  
+  disable_password_authentication = false
+  //  ssh 
+  //admin_ssh_key {
+  //  username   = "adminuser"
+  //  public_key = file("~/.ssh/id_rsa.pub")
+  // }
   
   //  NIC
   network_interface_ids   = [
