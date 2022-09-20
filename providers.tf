@@ -12,21 +12,10 @@ terraform {
 
     // In the real world, randomizing instance names
     // could be useful for tracking purposes
-    random = {
+    /* random = {
       source  = "hashicorp/random"
       version = "~>3.0"
-    }
-
-    // linode and tls needed for ssh key generation
-    // 
-    linode = {
-      source  = "linode/linode"
-      version = "1.13.4"
-    }
-    tls = {
-      source  = "hashicorp/tls"
-      version = "3.0.0"
-    }
+    } */
   }
 }
 

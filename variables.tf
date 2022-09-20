@@ -105,11 +105,6 @@ variable "netinterface" {
   description           = "Network interface"
 }
 
-/* variable "ssh_key" {
-  default     = "${rg_project}-key"
-  description = "SSH public key"
-} */
-
 /*  Locations
       asiapacific         australia           australiacentral    australiacentral2
       australiaeast       australiasoutheast  brazil              brazilsouth
