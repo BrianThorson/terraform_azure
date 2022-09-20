@@ -149,6 +149,7 @@ resource "azurerm_linux_virtual_machine" rg_project {
     version               = "latest"
   }
 
+
   //  Size & storage
   size                    = "${var.vm_size}"
   os_disk {
