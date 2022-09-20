@@ -1,16 +1,36 @@
-.terraform.lock.hcl
-main.destroy.tfplan
-main.tfplan
-terraform.tfstate
-terraform.tfstate.backup
-.terraform/providers/registry.terraform.io/hashicorp/azurerm/2.99.0/windows_386/terraform-provider-azurerm_v2.99.0_x5.exe
-backup/almost ready.zip
-backup/terraform_config_files.zip
-.terraform/providers/registry.terraform.io/hashicorp/random/3.4.3/windows_386/terraform-provider-random_v3.4.3_x5.exe
-old/main.tf
-old/outputs.tf
-old/pre-overhaul.zip
-old/backup-beforeworking.zip
-old/providers.tf
-old/variables.tf
-old/working.zip
+#   .gitignore     (Released under MIT License)    (2022 - Brian Thorson)
+
+#   Local .terraform directories
+*tfplan*
+**/.terraform/*
+.terraform*
+
+#   .tfstate files
+*.tfstate
+*.tfstate.*
+
+#   Crash log files
+crash.log
+crash.*.log
+
+#   Some typical backup or zips/tars, etc.
+**/old/*
+**/backup/*
+
+#   Local override resources 
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+#   CLI config files
+.terraformrc
+terraform.rc
+
+#   Typical sensitive data containing files
+#   In this project, we're including vars in 
+#   variables.tf for exercise.
+*.tfvars
+*.tfvars.json
+*.ppk
+*.pem

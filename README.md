@@ -1,12 +1,10 @@
-Released under MIT License
-Copyright (c) 2022 Brian Thorson.
-Refer to <https://opensource.org/licenses/MIT>
-
-This is a Terraform project that lets you try out deployment options in a few easy steps.
+Terraform_Azure         (Released under MIT License)
 
 This is my initial Terraform deployment environment for Microsoft Azure.
 
-It doesn't really address redundancy, elasticity and the like.  It's just a basic boilerplate to push out a virtual machine, and things you might see like its disk, a NIC, security group and vnet and resource group.  Assign a public IP address to the VM, etc.  Feel free to make the public address an optional item.
+It's a project that lets you try out Azure deployment options in a few easy steps.
+
+It'd definitely not intended for production, but it will create some resources for you so you can decide how to implement a few things in a future project.  It doesn't really address redundancy, elasticity and the like.  It's just a basic boilerplate to push out a virtual machine, and things you might see like its disk, a NIC, security group, virtual net, and resource group.  Assign a public IP address to the VM, etc.  Feel free to make the public address an optional item.  Things like that.
 
 
 Assumptions
@@ -25,7 +23,7 @@ After switching your desired variables, useful commands may be:
                 az group show --name <resource_group_name>
 
 
-Tweakable items include:    (look in variables.tf)
+Look in variables.tf for items to adjust
 
                 Resource Group name
                 Availability set
@@ -49,12 +47,3 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/
 https://registry.terraform.io/modules/Azure/network-security-group/azurerm/latest
 https://romaklimenko.github.io/blog/2021/list-locations/
 https://az-vm-image.info/
-
-
-Released under MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
