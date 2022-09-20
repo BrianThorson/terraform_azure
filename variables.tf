@@ -1,6 +1,4 @@
-//
-//  2022 (Brian Thorson) Copy, move, remove or label any and all parts
-//  Refer to <https://unlicense.org>
+//  variables.tf     (Released under MIT License)    (2022 - Brian Thorson)
 //
 //    Changeable items:
 //
@@ -17,6 +15,8 @@
 //  Resource group location       (possible locations at bottom)
 //
 variable "rg_location" {
+  //default     = "eastus2"
+  //default     = "westus3"
   default     = "westus3"
   description = "Resource group location"
 }
@@ -25,13 +25,16 @@ variable "rg_location" {
 //  Resource group naming         ("rg_prefix-rg_project")
 //
 variable "rg_prefix" {
+  //default     = "ubuntu"
+  //default     = "windows"
   default     = "ubuntu"
   description = "Resource group prefix name"
 }
 
 variable "rg_project" {
-  //default     = "winserver19"
-  default     = "assign3"
+  //default     = "server18"
+  //default     = "server19"
+  default     = "server18"
   description = "Resource group project name"
 }
 
@@ -40,18 +43,24 @@ variable "rg_project" {
 //                                      (VM Examples at bottom)
 //
 variable "vm_publisher" {
+  //default     = "Canonical"
+  //default     = "MicrosoftWindowsServer"
   default     = "Canonical"
   description = "VM Publisher"
 }
 
 variable "vm_offer" {
+  //default     = "UbuntuServer"
+  //default     = "WindowsServer"
   default     = "UbuntuServer"
   description = "VM Offer"
 }
 
 variable "vm_SKU" {
+  //default     = "18.04-LTS"
+  //default     = "2019-Datacenter"
   default     = "18.04-LTS"
-  description = "VM SKU"
+description = "VM SKU"
 }
 
 //
@@ -60,12 +69,12 @@ variable "vm_SKU" {
 //
 variable "vm_size" {
   default     = "Standard_B1s"
-  description = "VM Size"
+  description = "VM size"
 }
 
 variable "vm_storage_account_type" {
   default               = "Standard_LRS"
-  description           = "VM Managed disk type"
+  description           = "VM managed disk type"
 }
 
 variable "vm_disk_caching" {
@@ -85,6 +94,21 @@ variable "vm_admin_password" {
   default               = "Ch@ng3YourPa$$word!!!"
   description           = "VM admin user password"
 }
+
+variable "vnet" {
+  default               = "vnet"
+  description           = "Virtual network name"
+}
+
+variable "netinterface" {
+  default               = "network-interface"
+  description           = "Network interface"
+}
+
+/* variable "ssh_key" {
+  default     = "${rg_project}-key"
+  description = "SSH public key"
+} */
 
 /*  Locations
       asiapacific         australia           australiacentral    australiacentral2
@@ -106,6 +130,11 @@ variable "vm_admin_password" {
       westusstage */
 
 /*  VM Examples:
+      These 2 are available Azure student subscription (verified):
+      ----------------------  -----------     ---------------
+      Canonical               UbuntuServer    18.04-LTS
+      MicrosoftWindowsServer  WindowsServer   2019-Datacenter
+
       Image Publisher         Image offer     Image SKU
       ----------------------  -----------     ---------------
       MicrosoftWindowsServer  WindowsServer   2022-Datacenter

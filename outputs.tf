@@ -1,11 +1,5 @@
-//
-//  outputs.tf
-//  2022 (Brian Thorson) Copy, move, remove or label any and all parts
-//  Refer to <https://unlicense.org>
-//
+//  outputs.tf     (Released under MIT License)    (2022 - Brian Thorson)
 
-
-//  Output our resource group name
 output "rg_name" {
   value = azurerm_resource_group.rg.name
 }

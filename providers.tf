@@ -1,9 +1,4 @@
-//
-//  providers.tf
-//  2022 (Brian Thorson) Copy, move, remove or label any and all parts
-//  Refer to <https://unlicense.org>
-//
-
+//  providers.tf     (Released under MIT License)    (2022 - Brian Thorson)
 
 terraform {
   required_version = ">=0.12"
@@ -20,6 +15,17 @@ terraform {
     random = {
       source  = "hashicorp/random"
       version = "~>3.0"
+    }
+
+    // linode and tls needed for ssh key generation
+    // 
+    linode = {
+      source  = "linode/linode"
+      version = "1.13.4"
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "3.0.0"
     }
   }
 }
