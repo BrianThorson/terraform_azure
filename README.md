@@ -35,7 +35,11 @@ Look in variables.tf for items to adjust
 
 Future plans
 
-    Maybe add some looping to do things like add multiple IAM users or roles, among other things.  Terraform doesn't support traditional if-then conditionals, but it can be achieved.  It'd be nice to have condition where you create one thing, but not the other in Terraform.  There is a great article here: https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9#0223.  I'll try that out some time.  Or if someone comes across this and wants to add something along those lines, that would be super keen.
+    Maybe add some looping to do things like add multiple IAM users or roles, among other things.  
+    Terraform doesn't support traditional if-then conditionals, but it can be achieved.  
+    It'd be nice to have condition where you create one thing, but not the other in Terraform.  
+    There is a great article here: https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9#0223.  
+    I'll try that out some time.  Or if someone comes across this and wants to add something along those lines, that would be super keen.
 
     I'll probably try to add some branches for more complex implementations like peering setups, etc.
 
