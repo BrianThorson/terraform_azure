@@ -9,7 +9,7 @@ It'd definitely not intended for production, but it will create some resources f
 
 Assumptions
 
-This template assumes you have an Azure account, set up your az command line interface, and setup accessto it with your obtained your appId, displayName, password, and tenant.  It also assumes you've exported ARM_SUBSCRIPTION_ID, ARM_TENANT_ID, ARM_CLIENT_ID, ARM_CLIENT_SECRET to your environment.
+This template assumes you have an Azure account, set up your az command line interface, and setup access to it with your obtained your appId, displayName, password, and tenant.  It also assumes you've exported ARM_SUBSCRIPTION_ID, ARM_TENANT_ID, ARM_CLIENT_ID, ARM_CLIENT_SECRET to your environment.
 
 
 After switching your desired variables, useful commands may be:
@@ -33,6 +33,11 @@ Look in variables.tf for items to adjust
                 Network security group
                 Virtual Network
 
+Future plans
+
+    Maybe add some looping to do things like add multiple IAM users or roles, among other things.  Terraform doesn't support traditional if-then conditionals, but it can be achieved.  It'd be nice to have condition where you create one thing, but not the other in Terraform.  There is a great article here: https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9#0223.  I'll try that out some time.  Or if someone comes across this and wants to add something along those lines, that would be super keen.
+
+    I'll probably try to add some branches for more complex implementations like peering setups, etc.
 
 Useful links
 
